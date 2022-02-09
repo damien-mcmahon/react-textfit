@@ -1,7 +1,7 @@
 {
-  "name": "react-textfit",
+  "name": "react-textfit-ts",
   "version": "1.1.1",
-  "description": "React component to fit headlines and paragraphs into any element",
+  "description": "Typescript React component to fit headlines and paragraphs into any element",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
@@ -22,16 +22,17 @@
     "react",
     "react-component"
   ],
-  "author": "Malte Wessel",
+  "author": "Damien McMahon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/malte-wessel/react-textfit/issues"
   },
   "homepage": "https://github.com/malte-wessel/react-textfit",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
-    "babel-cli": "^6.26.0",
+    "babel-cli": "^7.17.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^4.1.5",
     "babel-loader": "^6.0.0",
