@@ -33,7 +33,7 @@ export default class App extends React.Component {
             <div>
                 <h1 className="headline">
                     react-textfit
-                    <a href="https://github.com/malte-wessel/react-textfit" target="_blank" style={{float: 'right'}}>
+                    <a href="https://github.com/malte-wessel/react-textfit" target="_blank" rel="noreferrer" style={{float: 'right'}}>
                         <i className="fa fa-github"/>
                     </a>
                 </h1>

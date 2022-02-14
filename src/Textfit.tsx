@@ -1,5 +1,4 @@
-import React, { FC, Component, ReactNode, useEffect, useRef, useState, ComponentProps } from 'react';
-import shallowEqual from './utils/shallowEqual';
+import  React, { ReactNode, useEffect, useRef, useState } from 'react';
 import series from './utils/series';
 import whilst from './utils/whilst';
 import throttle from './utils/throttle';
@@ -27,7 +26,7 @@ interface TextFitProps {
 }
 
 
-export const TextFitFC: FC<TextFitProps> = props => {
+export const TextFitFC: React.FC<TextFitProps> = props => {
     const { autoResize, throttle: throttleMs, mode, max, style, children, text} = props;
     const elementRef = useRef<HTMLParagraphElement>(null)
     const wrapperRef = useRef<HTMLDivElement>(null);

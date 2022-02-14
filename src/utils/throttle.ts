@@ -7,11 +7,13 @@
  * @return {Function} A new function that wraps the `func` function passed in.
  */
 
-export default function throttle(func, wait) {
-    let ctx;
-    let args;
-    let rtn;
-    let timeoutID;
+type TSFixMe = any;
+
+export default function throttle(func: TSFixMe, wait: TSFixMe) {
+    let ctx : TSFixMe;
+    let args: TSFixMe;
+    let rtn: TSFixMe;
+    let timeoutID :TSFixMe;
     let last = 0;
 
     function call() {
@@ -22,10 +24,9 @@ export default function throttle(func, wait) {
         args = null;
     }
 
-    return function throttled() {
+    return function throttled(this:TSFixMe, ...args: TSFixMe[]) {
         ctx = this;
-        args = arguments;
-        const delta = new Date() - last;
+        const delta: number = (new Date() as unknown as number) - last;
         if (!timeoutID) {
             if (delta >= wait) call();
             else timeoutID = setTimeout(call, wait - delta);

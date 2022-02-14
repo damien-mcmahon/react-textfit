@@ -1,4 +1,4 @@
-const noop = () => {};
+
 
 /**
  * Repeatedly call fn, while test returns true. Calls callback when stopped, or an error occurs.
@@ -8,12 +8,14 @@ const noop = () => {};
  * @param {Function} callback A callback which is called after the test fails and repeated execution of fn has stopped.
  */
 
-export default function whilst(test, iterator, callback = noop) {
-    if (test()) {
-        iterator(function next(err, ...args) {
+ type TSFixMe = any;
+
+export default function whilst(this: TSFixMe, test:((args: TSFixMe[]) => boolean), iterator: TSFixMe, callback: TSFixMe) {
+    if (test) {
+        iterator(function next(this: any, err:TSFixMe, ...args:TSFixMe[]) {
             if (err) {
                 callback(err);
-            } else if (test.apply(this, args)) {
+            } else if (test(args)) {
                 iterator(next);
             } else {
                 callback(null);
