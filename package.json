@@ -1,12 +1,12 @@
 {
   "name": "react-textfit",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Typescript React component to fit headlines and paragraphs into any element",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
     "build": "babel  ./src --out-dir lib --extensions '.ts,.tsx'",
-    "lint": "eslint src test examples",
+    "lint": "eslint src test",
     "test": "NODE_ENV=test",
     "test:watch": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch",
     "prepare": "npm run clean && npm run build"
@@ -57,9 +57,9 @@
     "webpack-cli": "^4.9.2"
   },
   "peerDependencies": {
+    "eslint-plugin-react": "^7.28.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "eslint-plugin-react": "^7.28.0"
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "process": "^0.11.10"
