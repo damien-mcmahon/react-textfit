@@ -166,16 +166,12 @@ export const Textfit: React.FC<TextFitProps> = props => {
         fontSize: fontSize
     };
 
-    const wrapperStyle = {
-        display: ready ? 'block' : 'inline-block',
-        'white-space': 'normal'
-    };
-
-    if (mode === 'single') wrapperStyle['white-space'] = 'nowrap';
-
     return (
         <div ref={elementRef} style={finalStyle} {...props}>
-            <div ref={wrapperRef} style={wrapperStyle}>
+            <div ref={wrapperRef} style={{
+                 display: ready ? 'block' : 'inline-block',
+                 whiteSpace: mode === 'single' ? 'nowrap' : 'normal'
+            }}>
                 {text && typeof children === 'function'
                     ? ready
                         ? children(text)
