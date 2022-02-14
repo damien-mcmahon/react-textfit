@@ -11,12 +11,14 @@
 
 import process from 'process';
 
-export default function series(tasks, cb) {
-    const results = [];
+type TSFixMe = any;
+
+export default function series(tasks: TSFixMe, cb: TSFixMe) {
+    const results: TSFixMe[] = [];
     let current = 0;
     let isSync = true;
 
-    function done(err) {
+    function done(err: TSFixMe) {
         function end() {
             if (cb) cb(err, results);
         }
@@ -24,7 +26,7 @@ export default function series(tasks, cb) {
         else end();
     }
 
-    function each(err, result) {
+    function each(err:TSFixMe, result:TSFixMe) {
         results.push(result);
         if (++current >= tasks.length || err) done(err);
         else tasks[current](each);

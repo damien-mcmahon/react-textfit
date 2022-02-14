@@ -1,4 +1,4 @@
-import  React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import series from './utils/series';
 import whilst from './utils/whilst';
 import throttle from './utils/throttle';
@@ -168,10 +168,10 @@ export const Textfit: React.FC<TextFitProps> = props => {
 
     const wrapperStyle = {
         display: ready ? 'block' : 'inline-block',
-        'whitespace': 'wrap'
+        'white-space': 'wrap'
     };
 
-    if (mode === 'single') wrapperStyle['whitespace'] = 'nowrap';
+    if (mode === 'single') wrapperStyle['white-space'] = 'nowrap';
 
     return (
         <div ref={elementRef} style={finalStyle} {...props}>
