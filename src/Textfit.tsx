@@ -168,7 +168,7 @@ export const Textfit: React.FC<TextFitProps> = props => {
 
     const wrapperStyle = {
         display: ready ? 'block' : 'inline-block',
-        'white-space': 'wrap'
+        'white-space': 'normal'
     };
 
     if (mode === 'single') wrapperStyle['white-space'] = 'nowrap';
