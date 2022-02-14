@@ -35,6 +35,7 @@ export const Textfit: React.FC<TextFitProps> = props => {
     const [pidRef, setPidRef] = useState<number>(uniqueId())
 
     const process = () => {
+        console.log("DFM _> PROCESS")
         const { min, max, mode, forceSingleModeWidth, onReady }: TextFitProps = props;
         const originalWidth = innerWidth(elementRef);
         const originalHeight = innerHeight(elementRef);
@@ -165,6 +166,8 @@ export const Textfit: React.FC<TextFitProps> = props => {
       ...style,
         fontSize: fontSize
     };
+
+    console.log("DM => FS", fontSize)
 
     return (
         <div ref={elementRef} style={finalStyle} {...props}>
