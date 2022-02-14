@@ -5,11 +5,11 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
-    "build": "babel src -d lib",
+    "build": "babel  ./src --out-dir lib --extensions '.ts,.tsx'",
     "lint": "eslint src test examples",
     "test": "NODE_ENV=test",
     "test:watch": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch",
-    "prepare": "npm run lint && npm run test && npm run clean && npm run build"
+    "prepare": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
