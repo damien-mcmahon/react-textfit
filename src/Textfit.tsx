@@ -11,7 +11,7 @@ type TSFixMe = any;
 const assertElementFitsWidth = (el:TSFixMe, width:number):boolean => el.scrollWidth - 1 <= width
 const assertElementFitsHeight  = (el: TSFixMe, height:number):boolean => el.scrollHeight - 1 <= height;
 
-function noop() {}
+// function noop() {}
 
 interface TextFitProps {
     children: ReactNode;
